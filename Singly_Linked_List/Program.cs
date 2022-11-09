@@ -40,10 +40,10 @@
             START = nodeBaru;
             return;
         }
-            //menemukan lokasi node baru di dalam list
-            Node previous, current;
-            previous = START;
-            current = START;
+        //menemukan lokasi node baru di dalam list
+        Node previous, current;
+        previous = START;
+        current = START;
 
         while ((current != null) && (nim >= current.noMhs))
         {
@@ -59,9 +59,23 @@
 
         nodeBaru.next = current;
         previous.next = nodeBaru;
+    }
+    //method untuk menghapus node tertentu didalam list*/
+    public bool delNode(int nim)
+    {
+        Node previous, current;
+        previous = current = null;
+        /*check apakah node yang dimaksud ada didalam list atau tidak*/
+        if (Search(nim, ref previous, ref current) == false)
+            return false;
+        previous.next = current.next;
+        if (current == START)
+            START = START.next;
+        return true;
+    }
 
+    /*Method untuk menge-check apakah node yang dimaksud ada didalam list atau tidak*/
 
-        }
          
 
     }
