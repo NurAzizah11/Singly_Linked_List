@@ -35,8 +35,26 @@
             {
                 Console.WriteLine("\nNomor mahasiswa sama tidak diizinkan");
                 return;
-
             }
+            nodeBaru.next = START;
+            START = nodeBaru;
+            return;
+        }
+            //menemukan lokasi node baru di dalam list
+            Node previous, current;
+            previous = START;
+            current = START;
+
+        while ((current != null ) && (nim >= current.noMhs))
+        {
+            if (nim == current.noMhs)
+            {
+                Console.WriteLine("\nNo mahasiswa sama tidak diizinkan\n");
+                return;
+            }
+            previous = current;
+            current = current.next;
+
         }
          
 
