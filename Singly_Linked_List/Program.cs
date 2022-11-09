@@ -8,9 +8,9 @@
         public string nama;
         public Node next;
     }
-   
-    class List
-    {
+
+class List
+{
     Node START;
     public List()
     {
@@ -75,6 +75,21 @@
     }
 
     /*Method untuk menge-check apakah node yang dimaksud ada didalam list atau tidak*/
+    public bool Search(int nim, ref Node previous, ref Node current)
+    {
+        previous = START;
+        current = current.next;
+
+        while ((current != null) && (nim != current.noMhs))
+        {
+
+        }
+
+
+
+    }
+
+
 
          
 
