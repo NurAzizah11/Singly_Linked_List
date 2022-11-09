@@ -45,7 +45,7 @@
             previous = START;
             current = START;
 
-        while ((current != null ) && (nim >= current.noMhs))
+        while ((current != null) && (nim >= current.noMhs))
         {
             if (nim == current.noMhs)
             {
@@ -54,6 +54,12 @@
             }
             previous = current;
             current = current.next;
+        }
+        //node baru akan ditempatkan diantara previous dan current
+
+        nodeBaru.next = current;
+        previous.next = nodeBaru;
+
 
         }
          
