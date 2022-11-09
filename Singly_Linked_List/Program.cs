@@ -96,30 +96,56 @@ class List
         if (listEmpty())
             Console.WriteLine("\nlist kosong. \n");
         else
+        {
             Console.WriteLine("\nData didalam list adalah : \n");
             Node currentNode;
             for (currentNode = START; currentNode != null; currentNode = currentNode.next)
-            Console.WriteLine(currentNode.noMhs + "" + currentNode.nama + "\n");
-
-
-
-
-        
-    }
-
+                Console.WriteLine(currentNode.noMhs + "" + currentNode.nama + "\n");
+            Console.WriteLine();
         }
-
-
-
     }
 
+    private bool listEmpty()
+    {
+        throw new NotImplementedException();
+    }
 
-
-         
-
+    public bool ListEmpty()
+    {
+        if (START == null)
+            return true;
+        else
+            return false;
     }
 }
-
+class Program
+{
+    static void Main(string[] args)
+    {
+        List obj = new List();
+        while (true)
+        {
+            try
+            {
+                Console.WriteLine("\nMenu");
+                Console.WriteLine("1. Menambahkan data kedalam list");
+                Console.WriteLine("2. Menghapus data diri dalam list");
+                Console.WriteLine("3. Melihat semua data didalam list");
+                Console.WriteLine("4. Mencari sebuah data didalam list");
+                Console.WriteLine("5. Exit");
+                Console.Write("\nMasukkan Pilihan Anda (1-5): ");
+                char ch = Convert.ToChar(Console.ReadLine());
+                switch (ch)
+                {
+                    case '1':
+                        {
+                            obj.addNode
+                        }
+                }
+            }
+        }
+    }
+}
 
 
 
