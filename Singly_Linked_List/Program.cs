@@ -82,6 +82,30 @@ class List
 
         while ((current != null) && (nim != current.noMhs))
         {
+            previous = current;
+            current = current.next;
+
+        }
+        if (current == null)
+            return (false);
+        else
+            return (true);
+    }
+    public void traverse()
+    {
+        if (listEmpty())
+            Console.WriteLine("\nlist kosong. \n");
+        else
+            Console.WriteLine("\nData didalam list adalah : \n");
+            Node currentNode;
+            for (currentNode = START; currentNode != null; currentNode = currentNode.next)
+            Console.WriteLine(currentNode.noMhs + "" + currentNode.nama + "\n");
+
+
+
+
+        
+    }
 
         }
 
